@@ -10,7 +10,7 @@ const SocialFeed = () => {
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [selectedPost, setSelectedPost] = useState(null);
-    const [searchQuery, setSearchQuery] = useState(''); // State for search input
+    const [searchQuery, setSearchQuery] = useState(''); 
 
     useEffect(() => {
         fetch('Users.json')
@@ -36,10 +36,9 @@ const SocialFeed = () => {
         setSelectedPost(null);
     };
 
-    // Filter posts in real-time based on search query, case-insensitive and matching the sender's name
     const filteredUsers = users.filter((post) => {
         return (
-            post.sender.name.toLowerCase().includes(searchQuery.toLowerCase()) // Case-insensitive check
+            post.sender.name.toLowerCase().includes(searchQuery.toLowerCase()) 
         );
     });
 
@@ -62,7 +61,7 @@ const SocialFeed = () => {
                     placeholder="Search posts by sender..."
                     className="w-full p-2 border rounded-lg"
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)} // Updates the search query
+                    onChange={(e) => setSearchQuery(e.target.value)} 
                 />
             </div>
 
@@ -134,7 +133,7 @@ const SocialFeed = () => {
                 </div>
             )}
 
-            {/* Lightbox for selected post's images */}
+            
             {isLightboxOpen && selectedPost && (
                 <Lightbox
                     open={isLightboxOpen}
@@ -149,6 +148,6 @@ const SocialFeed = () => {
             )}
         </div>
     );
-};
+  };
 
 export default SocialFeed;
