@@ -1,8 +1,18 @@
-# React + Vite
+# Social Feed Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A user-friendly React app to display social posts with search and lightbox functionality.
 
-Currently, two official plugins are available:
+## Features
+- Display posts with user info, likes, and comments.
+- Search posts by sender name.
+- Lightbox for viewing images interactively.
+- Fully responsive design.
+- Data fetched from a local `Users.json` file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **React** for UI development.
+- **date-fns** for timestamp formatting.
+- **Tailwind CSS** for styling.
+- **yet-another-react-lightbox** for image viewing.
+
+Live Link: https://technext-df794.firebaseapp.com/
